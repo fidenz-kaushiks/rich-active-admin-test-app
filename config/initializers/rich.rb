@@ -1,6 +1,6 @@
-require 'rich'
+require "rich"
 
-if Object.const_defined?('Rich')
+if Object.const_defined?("Rich")
   Rich.setup do |config|
     # == Backend configuration
     # Rich uses Paperclip (https://github.com/thoughtbot/paperclip) by default.
@@ -22,7 +22,8 @@ if Object.const_defined?('Rich')
     #
     # By default, Rich visualizes what type of element
     # you are editing. To disable this:
-    config.editor[:startupOutlineBlocks] = false
+    #   config.editor[:startupOutlineBlocks] = false
+
 
     # == Image styles
     #
@@ -35,13 +36,7 @@ if Object.const_defined?('Rich')
     # remember to re-generate your styles by running:
     #   rake rich:refresh_assets
     config.image_styles = {
-      icon: '45x45#',
-      thumb: '104x110#',
-      medium: '300x225#',
-      large: '1366x637#',
-      event_thumb: '260x160#',
-      main_slider: '1366x637#',
-      cr_slider: '1366x300#'
+      :thumb => "100x100#"
     }
 
     # == Convert options
@@ -63,7 +58,7 @@ if Object.const_defined?('Rich')
     #   config.allowed_styles = [ :large, :thumb ]
     #
     # Default:
-    config.allowed_styles = :rich_thumb
+    # config.allowed_styles = :all
 
     # == Default Style
     #
@@ -72,36 +67,36 @@ if Object.const_defined?('Rich')
     # the unprocessed file. Make sure this style exists.
     config.default_style = :thumb
 
-    # == Upload non-image files
-    #
-    # Setting this option to true will add a second Rich filebrowser icon to
-    # the editor toolbar. In this filebrowser you can upload non-image files.
-    # Inserting these files into your editor will result in a direct (A) link.
-    #
-    # Default:
-    config.allow_document_uploads = true
-
-    # == Set allowed filetypes for non-image files
-    #
-    # If you want, you can restrict the types of documents that users can upload.
-    # Default behavior is to allow any kind of file to be uploaded. You can set
-    # the accepted types by providing an array of mimetypes to check against.
-    # Note that for this to have any effect, you first need to enable document
-    # uploads using the setting above.
-    #
-    # Default, allow any file to be uploaded:
-    config.allowed_document_types = :all
-    #
-    # Example, only allow PDF uploads:
-    # config.allowed_document_types = ['application/pdf']
-
-    # == Asset insertion
-    #
-    # Set this to true to keep the filebrowser open after inserting an asset.
-    # Also configurable per-use from within the filebrowser.
-    #
-    # Default:
-    # config.insert_many = false
+	# == Upload non-image files
+	#
+	# Setting this option to true will add a second Rich filebrowser icon to
+	# the editor toolbar. In this filebrowser you can upload non-image files.
+	# Inserting these files into your editor will result in a direct (A) link.
+	#
+	# Default:
+	# config.allow_document_uploads = false
+		
+	# == Set allowed filetypes for non-image files
+	#
+	# If you want, you can restrict the types of documents that users can upload.
+	# Default behavior is to allow any kind of file to be uploaded. You can set
+	# the accepted types by providing an array of mimetypes to check against.
+	# Note that for this to have any effect, you first need to enable document
+	# uploads using the setting above.
+	#
+	# Default, allow any file to be uploaded:
+	# config.allowed_document_types = :all
+	#
+	# Example, only allow PDF uploads:
+	# config.allowed_document_types = ['application/pdf']
+		
+	# == Asset insertion
+	#
+	# Set this to true to keep the filebrowser open after inserting an asset.
+	# Also configurable per-use from within the filebrowser.
+	#
+	# Default:
+	# config.insert_many = false
 
     # == User Authentication
     #
@@ -122,8 +117,9 @@ if Object.const_defined?('Rich')
     # By default, file picker loads up assets in blocks of 34.
     #
     # Default:
-    config.paginates_per = 68
-    config.folder_level = 3
+    # config.paginates_per = 34
+
+    config.use_active_storage = false
   end
 
   Rich.insert

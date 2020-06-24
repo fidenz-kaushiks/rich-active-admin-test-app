@@ -34,6 +34,7 @@ class DeviseCreateAdminUsers < ActiveRecord::Migration[6.0]
 
 
       t.timestamps null: false
+      t.integer :rich_rich_file_id
     end
 
     add_index :admin_users, :email,                unique: true

@@ -12,4 +12,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.precompile += %w( application.js )
 Rails.application.config.assets.precompile += %w( rich/editor.css )
+Rails.application.config.assets.precompile += %w( icons/icon-empty.png )
+Rails.application.config.assets.precompile += %w( icons/icon-pdf.png )
+Rails.application.config.assets.precompile += %w( icons/* )
