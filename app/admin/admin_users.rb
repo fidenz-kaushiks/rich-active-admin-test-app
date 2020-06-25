@@ -24,7 +24,7 @@ ActiveAdmin.register AdminUser do
     end
 
     f.inputs 'Featured Image' do
-      f.input :rich_rich_file_id, as: :rich_picker, config: { type:'image', style: 'width: 400px !important;'}
+      f.input :rich_rich_file_id, as: :rich_picker, config: { type: 'any', style: 'width: 400px !important;'}
     end
 
     f.actions
