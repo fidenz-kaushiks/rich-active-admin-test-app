@@ -1,5 +1,7 @@
-PATH
-  remote: /home/fidenz/Documents/fidenz/rails/kaushik-rich
+GIT
+  remote: https://github.com/fidenz-kaushiks/rich.git
+  revision: 04bb16f7029ab6eee35719f1d663ba3ab68ec948
+  branch: feature/active-storage
   specs:
     rich (1.4.8)
       jquery-rails

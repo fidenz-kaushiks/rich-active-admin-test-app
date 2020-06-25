@@ -58,7 +58,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'activeadmin'
 gem 'devise'
-gem 'rich', path: '/home/fidenz/Documents/fidenz/rails/kaushik-rich'
+gem 'rich', git: 'https://github.com/fidenz-kaushiks/rich.git', :branch => 'feature/active-storage'
 gem 'paperclip'
 gem 'activestorage-validator'
 gem 'image_processing', '~> 1.2'
